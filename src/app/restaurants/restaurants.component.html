@@ -1,0 +1,11 @@
+<h2>Top Restaurants</h2>
+
+<ul class="restaurants">
+  <li *ngFor="let restro of restaurants">
+    <a routerLink="/detail/{{restro.id}}">
+      <span class="badge">{{restro.id}}</span> {{restro.name}}
+    </a>
+  </li>
+</ul>
+
+<app-restaurant-detail [restro]="selectedRestro"></app-restaurant-detail>
